@@ -1,0 +1,41 @@
+% ********** Rozdzia³ 2 **********
+\chapter{Klasteryzacja}
+\label{sec:chapter2}
+
+Pomys³ polega na tym, aby u¿ywaj¹c istniej¹cych miar w repozytoriach projektu stworzyæ model  predykcji za pomoc¹ klasteryzacji oraz zbiorów przybli¿onych (Rough Sets).
+
+\section{Badanie}
+W tym rozdziale prezentujemy krótkie podsumowanie prowadzonych badañ.
+\subsection{Dane}
+Dane, za pomoc¹ których przeprowadzamy wstêpne badania, pochodz¹ ze strony~\cite{BugRepo01}.
+Jest to repozytorium u¿yte w artykule~\cite{Dambros_Comparison}, dla porównania wielu modeli predykcji defektów. Dlatego, one jak i sam artyku³ stanowi¹ wspania³y wzorzec i porównianie dla naszych w³asnych badañ.
+Coprawda repozytorium to zawiera drobny b³¹d, ale przetworzenie ich daje nam 697 klas z opisuj¹cymi ich metrykami oraz iloœci¹ defektów przed i po dacie ``release''.
+
+\subsection{Modele}
+Do powy¿szych danych zastosowano 4 modele okreœlaj¹ce grupy klass.
+\subsubsection{Klasteryzacja}
+U¿ywaj¹c po³¹czonych metryk CK oraz OO wylistowanych klas, poddano w tren sposób otrzymany zbiór klasteryzacji.
+W tym celu u¿yto narzêdzia ``Rattle'' i algorytmu Klasteryzacji Hierarchialnej.
+Wynikiem by³o 20 klastrów, którym nastêpnie okreœlono poziom defektywnoœci wed³ug iloœci defektów wykrytych przed zamkniêciem projektu.
+\subsubsection{Iloœæ defektów}
+Tutaj tak¿e podizielono klasy na 20 grup ale ca³kiem innym sposobem.
+Podzia³u dokokonano dok³adnie na podstawie iloœci defektów odnalezionych w klasie przed zamkniêciem projektu.
+Przy czym bior¹c pod uwagê fakt, ¿e klass, w których nie wykryto ¿adnych defektów, jest znacznie wiêcej, podzielono dodatkowo t¹ grupê na 12 grup.
+Podobnie jak poprzedni model, i ten poddano treningowi, okreœlaj¹c poziom defektywnoœci dziêki œredniej iloœci defektów w klasie danej grupy.
+\subsubsection{Równe grupy}
+Wszystkie klasy podzielono równo na 20 grup. Podzia³u dokonano wed³ug kolejnoœci alfabetyczne. Czyli mniej wiêcej losowo.
+Podobnie jak poprzednie modele, i ten poddano treningowi za pomoc¹ œredniej iloœci bugów wykrytych przed zamkniêciem projektu wykrytych w klasach grupy.
+\subsubsection{Równe grupy - defekty}
+W tym modelu, klasy tak¿e podzielono na 20 równych grup. Ale tym razem wed³ug kolejnoœci wzglêdem iloœci defektów wykrytych przed zamkniêciem projektu.
+
+\subsubsection{Wyniki}
+Jak to zosta³o ju¿ odkryte w artykule~\cite{Zimm2007} Zimmermana. Iloœæ defektów, odkrytych przed zamkniêciem projektu, mocno wp³ywa na ich iloœæ znalezionych po.
+Dlatego widoczna jest wysoka jakoœæ predykcji niezale¿nie jaki model podzia³u na grupy zastosowaliœmy
+\\
+TODO: wkleiæ wyniki stworzonych modeli
+\\
+TODO: porównaæ ich wyniki w miarê sensowny sposób, tak aby da³o to siê jakoœ porównaæ z Dambrosem.
+
+Pewne symbole: DMC\label{sym:DMC}, LZ77\label{sym:LZ77}, LZ78\label{sym:LZ78}.
+
+% ********** Koniec rozdzia³u **********

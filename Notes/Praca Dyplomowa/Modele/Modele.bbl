@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{Zimm2007}
+
+
+\bibitem{Dambros_Comparison}
+M.~D'Ambros, M.~Lanza, and R.~Robbes.
+\newblock An extensive comparison of bug prediction approaches.
+\newblock In {\em Mining Software Repositories (MSR), 2010 7th IEEE Working
+  Conference on}, pages 31 --41, may 2010.
+
+\bibitem{BugRepo01}
+Marco D'Ambros, Michele Lanza, and Romain Robbes.
+\newblock Bug prediction dataset.
+
+\end{thebibliography}

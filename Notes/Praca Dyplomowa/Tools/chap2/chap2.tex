@@ -1,0 +1,57 @@
+% ********** Rozdzia³ 2 **********
+\chapter{CLUTO}
+\label{sec:chapter2}
+
+\section{Opis}
+
+\section{U¿ycie}
+
+\textbf{vcluster} [optional parameters] \textit{MatrixFile NClusters}
+
+Odpowiednio:
+\begin{itemize}
+	\item \textit{MatrixFile} - plik z macierz¹ danych.
+	\item \textit{NClusters} - liczba klastró w macierzy
+	\item \textbf{parametry}
+	\begin{itemize}
+		\item \textbf{-clmethod=nazwa} - metoda klasteryzacji.
+		\begin{itemize}
+			\item \textbf{rb} - k-way - repeated bisections
+			\item \textbf{rbr} - almost the same
+			\item \textbf{direct} - wszystkie klastry s¹ wynajdywane równoczeœnie
+			\item \textbf{agglo} - klastry obliczane s¹ u¿ywaj¹c \textit{agglomerative}. Proces zostaje przerwany, gdy znalezionych zostanie k klastrów
+			\item \textbf{graph} - Tworzony jest graf najbli¿szych s¹siadów. Nastêpnie znajduje siê klastry metod¹ min-cut.
+			\item \textbf{bagglo} - 
+
+		\end{itemize}
+		\item \textbf{-sim=nazwa} - Funkcja podobieñstwa
+		\begin{itemize}
+			\item \textbf{cos}
+			\item \textbf{corr}
+			\item \textbf{dist}
+			\item \textbf{jacc}
+		\end{itemize}
+		\item \textbf{-crfun=nazwa} - kryterium klasteryzacji
+		\begin{itemize}
+			\item \textbf{i1}
+			\item \textbf{i2}
+			\item \textbf{e1}
+			\item \textbf{g1}
+			\item \textbf{g1p}
+			\item \textbf{h1}
+			\item \textbf{h2}
+			\item \textbf{slink}
+			\item \textbf{wslink}
+			\item \textbf{clink}
+			\item \textbf{wclink}
+			\item \textbf{upgma}
+		\end{itemize}
+		\todo{dodaæ te piêkne wzory matematyczne z manuala}
+		\item \textbf{-agglocrfun=string}
+		\item[] Kontroluje ''. Mo¿na u¿yæ tych samych wartoœci jak dla opcji \textbf{-crfun}
+		\item \textbf{-fulltree}
+		\item \textbf{-rowmodel}
+		
+	\end{itemize}
+\end{itemize}
+% ********** Koniec rozdzia³u **********
